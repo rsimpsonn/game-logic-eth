@@ -16,6 +16,7 @@ class Layout extends Component {
         return (
             <Aux>
                 <Toolbar />
+                {this.props.children}
             </Aux>
         );
     }

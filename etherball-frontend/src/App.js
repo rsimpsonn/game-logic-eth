@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 
 import './themes.css';
 import './App.css';
@@ -15,18 +15,18 @@ class App extends Component {
     return (
       <Aux>
         <Layout>
-          <Redirect from="/" to="/profile" />
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/marketplace" component={MarketPage} />
-          <Route path="/game" component={GamePage} />
+          <Switch>
+            <Route path="/profile" render={() => (
+              <ProfilePage />
+            )} />
+            <Route path="/marketplace" component={MarketPage} />
+            <Route path="/game" component={GamePage} />
+            <Redirect from="/" to="/profile" />
+          </Switch>
+          <hr />
+          <CharacterPage />
         </Layout>
-        <MarketPage />
-        <hr />
-        <ProfilePage />
-        <hr />
-        <GamePage />
-        <hr />
-        <CharacterPage />
+
       </Aux>
     );
   }

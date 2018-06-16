@@ -22,17 +22,17 @@ class CharacterPage extends Component {
                     <div style={{ display: "flex", flexDirection: "row"}}>
                         <div style={styles.attribute}>
                             <span style={{ color: "#cccccc" }}> Attributes </span>
-                            <h4> NUM ATTRIBUTE </h4>
-                            <h4> NUM ATTRIBUTE </h4>
-                            <h4 style={{ color: "#cccccc" }}> NUM ATTRIBUTE </h4>
-                            <h4 style={{ color: "#dddddd" }}> NUM ATTRIBUTE </h4>
+                            <h4> NUM strength </h4>
+                            <h4> NUM speed </h4>
+                            <h4 style={{ color: "#cccccc" }}> NUM shot </h4>
+                            <h4 style={{ color: "#dddddd" }}> NUM confidence </h4>
                         </div>
                         <div style={styles.attribute}>
                             <span style={{ color: "#cccccc" }}> Per Game Statistics </span>
-                            <h4> NUM STATISTIC </h4>
-                            <h4> NUM STATISTIC </h4>
-                            <h4 style={{ color: "#cccccc" }}> NUM STATISTIC </h4>
-                            <h4 style={{ color: "#dddddd" }}> NUM STATISTIC </h4>
+                            <h4> NUM minutes </h4>
+                            <h4> NUM points </h4>
+                            <h4 style={{ color: "#cccccc" }}> NUM assists </h4>
+                            <h4 style={{ color: "#dddddd" }}> NUM rebounds </h4>
                         </div>
                     </div>
                     <img src="https://i1.wp.com/www.dothemovement.com/wp-content/uploads/2018/01/Fitness-Bell-Curve.jpg"

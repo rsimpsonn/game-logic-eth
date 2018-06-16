@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 
+import '../themes.css';
+import ProfileHeader from './ProfileHeader';
+
 class ProfilePage extends Component {
+
+    state = {
+        
+    }
 
     render() {
         return (
-            <div> Imaginary Profile Page </div>
+            <div>
+                <ProfileHeader />
+            </div>
         );
     }
 
