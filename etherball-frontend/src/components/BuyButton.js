@@ -7,7 +7,7 @@ const BuyButton = props => {
     return (
         <button
             type="button"
-            class="btn btn-outline-info"
+            className="btn btn-outline-info"
             onClick={props.onBuyCard}
             style={{ marginLeft: "65px" }}
         >

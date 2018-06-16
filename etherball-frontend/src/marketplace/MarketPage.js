@@ -8,6 +8,7 @@ class MarketPage extends Component {
     state = {
         characters: [
             {
+                id: "Dudley James",
                 name: "Dudley James",
                 species: "Sloth",
                 position: "PG",
@@ -18,11 +19,13 @@ class MarketPage extends Component {
                 shot: 71,
                 imageSrc: "http://placehold.it/358x358/E8117F/FFFFFF",
                 price: 0.01,
+                color: "#F4ECDF",
             },
             {
+                id: "Al Gordon",
                 name: "Al Gordon",
                 species: "Sloth",
-                position: "PG",
+                position: "SG",
                 games: 8,
                 height: "3'6",
                 speed: 64,
@@ -30,8 +33,10 @@ class MarketPage extends Component {
                 shot: 71,
                 imageSrc: "http://placehold.it/358x358/E8117F/FFFFFF",
                 price: 0.01,
+                color: "#DBF0F5",
             },
             {
+                id: "Al Gordon 2",
                 name: "Al Gordon 2",
                 species: "Sloth",
                 position: "PG",
@@ -42,8 +47,10 @@ class MarketPage extends Component {
                 shot: 71,
                 imageSrc: "http://placehold.it/358x358/E8117F/FFFFFF",
                 price: 0.01,
+                color: "#F4ECDF",
             },
             {
+                id: "Al Gordon 3",
                 name: "Al Gordon 3",
                 species: "Sloth",
                 position: "PG",
@@ -54,6 +61,21 @@ class MarketPage extends Component {
                 shot: 71,
                 imageSrc: "http://placehold.it/358x358/E8117F/FFFFFF",
                 price: 0.01,
+                color: "#DBF0F5",
+            },
+            {
+                id: "Al Gordon 4",
+                name: "Al Gordon 4",
+                species: "Sloth",
+                position: "PG",
+                games: 8,
+                height: "3'6",
+                speed: 64,
+                strength: 46,
+                shot: 71,
+                imageSrc: "http://placehold.it/358x358/E8117F/FFFFFF",
+                price: 0.01,
+                color: "#F4ECDF",
             },
         ],
         search: '',
@@ -92,7 +114,7 @@ class MarketPage extends Component {
 
         const players = this.state.characters.map(player => {
             return (<ShopCard 
-                key={player.name} 
+                key={player.id} 
                 player={player}
                 onBuyCard={() => this.onBuyCard(player.name)}
                 onClick={() => this.onSelect(player.name)} />);
@@ -108,7 +130,7 @@ class MarketPage extends Component {
                 />
 
                 <hr />
-                <div style={{ display: "flex", flexDirection: "row"}}>
+                <div style={{ display: "flex", flexDirection: "row", flexFlow: "row wrap" }}>
                     {players}
                 </div>
             </div>

@@ -9,11 +9,11 @@ import BuyButton from '../components/BuyButton';
 //Prop should be one character object
 const ShopCard = props => {
     return (
-        <div style={{ color: "#cccccc", backgroundColor: "#FFFFFF", margin: "20px" }}>
-            <Backdrop style={styles.imageDiv} width="330px" color="#F4ECDF" >
+        <div style={{ color: "#cccccc", backgroundColor: "#FFFFFF", margin: "20px 0px 20px 0px" }}>
+            <Backdrop style={styles.imageDiv} width="300px" color={props.player.color} >
                 <img src={dummyimage} 
                     alt="Player" 
-                    style={{ height: "200px", width: "200px", margin: "65px" }} 
+                    style={{ height: "200px", width: "200px", margin: "50px" }} 
                     onClick={props.onClick}
                 />
                 <BuyButton style={styles.button} onBuyCard={props.onBuyCard} price={props.player.price} />
@@ -39,7 +39,7 @@ const styles = {
     imageDiv: {
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignContent: "center",
         justifyContent: "center",
     },
     button: {
@@ -48,6 +48,7 @@ const styles = {
         marginBottom: "5px",
         fontWeight: "bold",
         position: "relative",
+        textAlign: "center",
     }
 }
 

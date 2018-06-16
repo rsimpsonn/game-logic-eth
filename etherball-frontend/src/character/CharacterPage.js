@@ -35,8 +35,10 @@ class CharacterPage extends Component {
                             <h4 style={{ color: "#dddddd" }}> NUM rebounds </h4>
                         </div>
                     </div>
-                    <img src="https://i1.wp.com/www.dothemovement.com/wp-content/uploads/2018/01/Fitness-Bell-Curve.jpg"
+                    <img 
+                        src="https://i1.wp.com/www.dothemovement.com/wp-content/uploads/2018/01/Fitness-Bell-Curve.jpg"
                         style={{ height: "250px"}}
+                        alt="Chart"
                     />
                 </div>
             </div>
