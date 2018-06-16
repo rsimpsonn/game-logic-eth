@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css'
+import { Route, Redirect } from 'react-router-dom';
+
+import './themes.css';
+import './App.css';
+import Layout from './layout/Layout';
+import MarketPage from './marketplace/MarketPage';
+import GamePage from './game/GamePage';
+import ProfilePage from './profile/ProfilePage';
+import CharacterPage from './character/CharacterPage';
+import Aux from './hoc/aaux';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Aux>
+        <Layout>
+          <Redirect from="/" to="/profile" />
+          <Route path="/profile" component={ProfilePage} />
+          <Route path="/marketplace" component={MarketPage} />
+          <Route path="/game" component={GamePage} />
+        </Layout>
+        <MarketPage />
+        <hr />
+        <ProfilePage />
+        <hr />
+        <GamePage />
+        <hr />
+        <CharacterPage />
+      </Aux>
     );
   }
 }
