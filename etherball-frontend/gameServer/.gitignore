@@ -19,3 +19,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
